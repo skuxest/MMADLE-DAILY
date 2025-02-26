@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Fighter</title>
+    <link rel="stylesheet" href="fighterguess.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo"><img src="../IMAGES/LOGO2.png" alt="MMADLE Logo"></div>
+
+        <div class="color-indicators-header"><p>COLOR INDICATORS</p></div>
+
+        <div class="feedback-box">
+            <div class="feedback-container"><img src="../IMAGES/RIGHT.png" class="feedback-item"><p class="indicator-label">RIGHT</p></div>
+            <div class="feedback-container"><img src="../IMAGES/WRONG.png" class="feedback-item"><p class="indicator-label">WRONG</p></div>
+            <div class="feedback-container"><img src="../IMAGES/PARTIAL.png" class="feedback-item"><p class="indicator-label">PARTIAL</p></div>
+            <div class="feedback-container"><img src="../IMAGES/MORE.png" class="feedback-item"><p class="indicator-label">HIGHER</p></div>
+            <div class="feedback-container"><img src="../IMAGES/LESS.png" class="feedback-item"><p class="indicator-label">LOWER</p></div>
+        </div>
+
+        <div class="hints-container">
+            <p class="hints-title">HINTS</p>
+            <div class="hints-buttons">
+                <div class="hint-image-wrapper" id="hint1Wrapper">
+                    <img src="../IMAGES/STYLECLUE.png" alt="Style Hint" id="hint1Image" class="hint-image disabled-hint">
+                    <p class="hint-countdown" id="hint1Countdown">Style clue in 5 tries</p>
+                </div>
+                <div class="hint-image-wrapper" id="hint2Wrapper">
+                    <img src="../IMAGES/APPEARANCECLUE.png" alt="Appearance Hint" id="hint2Image" class="hint-image disabled-hint">
+                    <p class="hint-countdown" id="hint2Countdown">Last appearance clue in 8 tries</p>
+                </div>
+                <div class="hint-image-wrapper" id="hint3Wrapper">
+                    <img src="../IMAGES/NICKNAME.png" alt="Nickname Hint" id="hint3Image" class="hint-image disabled-hint">
+                    <p class="hint-countdown" id="hint3Countdown">Nickname clue in 10 tries</p>
+                </div>
+                
+            </div>
+            <div class="hint-display">
+                <div id="hint1Popdown" class="hint-popdown" style="display: none;"></div>
+                <div id="hint2Popdown" class="hint-popdown" style="display: none;"></div>
+                <div id="hint3Popdown" class="hint-popdown" style="display: none;"></div>
+            </div>
+        </div>        
+        
+
+        <div class="input-box">
+            <input type="text" id="fighterInput" placeholder="GUESS FIGHTER HERE">
+            <button id="submitGuess">Submit</button>
+        </div>
+        <div id="dropdown" class="autocomplete-dropdown"></div>
+
+        <div class="previous-guesses-container">
+            <div class="guess-wrapper">
+                    <div id="headerRowContainer"></div> <!-- Header goes here -->
+                    <div id="previousGuesses"></div> <!-- Guesses go here -->
+            </div>
+        </div>
+        
+
+        <p id="resultMessage"></p>
+
+        <button id="resetGame" style="display: none;">Play Again</button>
+    </div>
+
+    <div id="victoryCard" class="victory-card" style="display: none;">
+        <h1>VICTORY!</h1>
+        <div class="victory-fighter-info">
+            <img id="victoryFighterImage" class="victory-card-img" src="" alt="Fighter Image">
+            <p>Todays fighter was <strong id="victoryFighterName"></strong></p>
+        </div>
+        <p>NUMBER OF TRIES: <span id="victoryAttempts">0</span></p>
+        <button onclick="resetGame()" class="victory-play-again">Play Again</button>
+    </div>
+    
+
+    <script src="fighters.js"></script>
+    <script src="fighterguess.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,625 @@
+/* === GENERAL PAGE STYLING === */
+@font-face {
+    font-family: 'Compacta';
+    src: url('../IMAGES/Compacta-Bold.woff2') format('woff2'),
+         url('../IMAGES/Compacta-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin-left: 20px;
+    margin-right: 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Compacta', sans-serif; /* Default font */
+    background: url('../IMAGES/BACKGROUNDFINAL.png') no-repeat center center fixed;
+    background-size: cover; /* Ensures it covers the whole screen */
+    background-attachment: fixed; /* Keeps the background from moving when scrolling */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white; /* Makes text white by default */
+    overflow: auto; /* Makes the entire page scrollable */
+    text-shadow:rgba(0, 0, 0, 0.5)
+}
+
+/* === Apply Text Stroke (Black Outline Around Letters) === */
+h1, h2, h3, p, .indicator-label, button {
+    text-shadow: 
+        -1px -1px 0 black, 
+         1px -1px 0 black, 
+        -1px  1px 0 black, 
+         1px  1px 0 black; /* Creates a bold black outline */
+    color: white; /* Text remains white */
+}
+
+/* === MAIN CONTAINER === */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Adjusts dynamically based on content */
+    padding-bottom: 50px; /* Adds space at the bottom for long scrolling */
+}
+
+/* === LOGO === */
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    display: inline-block;
+    height: 200px
+}
+
+/* === COLOR INDICATORS HEADER === */
+.color-indicators-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+/* === FEEDBACK INDICATORS CONTAINER (Now with Black Border) === */
+.feedback-box {
+    display: flex;
+    justify-content: center;
+    background: #333232; /* Light grey background */
+    padding: 15px;
+    margin-top: 10px;
+    gap: 20px;
+    border-radius: 8px;
+    /*border: 2px solid black; /* Added black border */
+    border: 2px solid #b6a232; /* Gold Border */
+}
+
+/* Feedback images */
+.feedback-item {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Ensures images fit properly */
+}
+
+/* Labels under each indicator */
+.indicator-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* === INPUT BOX (Now with Black Border) === */
+.input-box {
+    display: flex;
+    align-items: center;
+    background: #333232;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #b6a232; /* Gold Border */
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-box button {
+    margin-left: 10px;
+}
+
+#resetGame {
+    margin-top: 20px; /* Separate spacing for reset button */
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* === PREVIOUS GUESSES CONTAINER (Now Centered) === */
+.previous-guesses-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers all content inside */
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* === WRAPPER TO CENTER HEADER AND GUESSES === */
+.guess-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the table */
+    justify-content: center;
+    width: fit-content; /* Ensures it only takes up necessary space */
+    margin: auto; /* Ensures it is centered */
+}
+
+/* === HEADER ROW (Now 50x50px and Centered) === */
+/* === HEADER ROW (Transparent, Lower Text, and Underline) === */
+.guess-header {
+    display: grid;
+    grid-template-columns: repeat(8, 80px);
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    height: 80px;
+    align-items: flex-end; /* Moves text towards the bottom */
+    font-size: 12px;
+    gap: 12px;
+    justify-content: center;
+    background-color: transparent; /* Makes background transparent */
+    margin-bottom: 5px; /* Optional slight gap */
+    gap: 10px
+}
+
+.guess-header div {
+    display: flex;
+    align-items: flex-end; /* Moves text towards the bottom */
+    justify-content: center;
+    height: 30px; /* Lower the text height area */
+    padding-bottom: 5px; /* Gives a bit of space to lower the text visually */
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 2px solid white; /* Underline */
+    background-color: transparent; /* No background color */
+}
+
+/* === PREVIOUS GUESSES LIST (Rows Now Centered) === */
+.guess-row {
+    display: grid;
+    grid-template-columns: repeat(8, 80px);
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === HINT BOXES (Now Perfectly Square at 50x50px & Centered) === */
+/* === HINT BOXES (Now with Border and Inner Shadow) === */
+/* === HINT BOXES (Flip Animation + Style) === */
+.hint-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+    border: 1px solid white;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 1.1;
+    transform: rotateY(90deg); /* Hidden initially */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    backface-visibility: hidden; /* Stops flickering */
+    overflow: hidden;
+    gap: 10px;
+    text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+}
+
+/* === FORCE LONG TEXT TO WRAP INSIDE THE HINT BOX === */
+.hint-box span {
+    display: block;
+    word-wrap: break-word;
+    font-size: 10px; /* Adjust this if needed */
+    line-height: 1.2;
+}
+
+/* === Flip Animation Delays === */
+.guess-row .hint-box:nth-child(2) { transition-delay: 0.1s; }
+.guess-row .hint-box:nth-child(3) { transition-delay: 0.2s; }
+.guess-row .hint-box:nth-child(4) { transition-delay: 0.3s; }
+.guess-row .hint-box:nth-child(5) { transition-delay: 0.4s; }
+.guess-row .hint-box:nth-child(6) { transition-delay: 0.5s; }
+.guess-row .hint-box:nth-child(7) { transition-delay: 0.6s; }
+.guess-row .hint-box:nth-child(8) { transition-delay: 0.7s; }
+
+/* === Trigger Flip Animation After Being Added === */
+.hint-box.revealed {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+
+/* === Background Images for Different Hints === */
+.hint-correct { background-image: url("../IMAGES/RIGHT.png"); }
+.hint-wrong { background-image: url("../IMAGES/WRONG.png"); }
+.hint-partial { background-image: url("../IMAGES/PARTIAL.png"); }
+.hint-higher { background-image: url("../IMAGES/MORE.png"); }
+.hint-lower { background-image: url("../IMAGES/LESS.png"); }
+
+.autocomplete-dropdown {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    border: 1px solid white;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 250px;
+    z-index: 10;
+    display: none;
+}
+
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.2s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left; /* Make sure text is left-aligned */
+}
+
+.dropdown-option:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+}
+
+
+/* === RESULT MESSAGE (FOR WIN/LOSS) === */
+#resultMessage {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* === RESET BUTTON === */
+#resetGame {
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    display: none;
+}
+
+#resetGame:hover {
+    background: darkgray;
+}
+
+.fighter-name-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 0px;
+    border: 1px solid white;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensures image doesn't overflow */
+    padding: 0; /* Remove any padding */
+}
+
+/* Dropdown Face Icon */
+.dropdown-face-icon {
+    width: 60px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+
+/* Fighter Face Icon in Previous Guesses */
+.fighter-face-icon {
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 0px;
+    border: 1px solid white;
+}
+.victory-card {
+    background-color: rgba(59, 188, 11, 0.822);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid white; /* White border */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.victory-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.victory-card-img {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 10px 0;
+    object-fit: contain;
+
+}
+
+/* HINTS SECTION */
+
+/* === HINTS AREA === */
+.hints-container {
+    background: #333232;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #b6a232; /* Gold Border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+    margin-top: 18px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hints-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: none;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.hints-buttons {
+    display: flex;
+    flex-direction: row; /* This is the key line */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Space between the two hints */
+}
+
+.hint-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hint-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.hint-image:hover:not(.disabled-hint) {
+    transform: scale(1.1);
+}
+
+.disabled-hint {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.enabled-hint {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hint-countdown {
+    margin-top: 5px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Compacta', sans-serif;
+    text-align: center;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    width: 100px
+}
+
+.hint-popdown {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.95); /* Keeps your dark background */
+    color: rgb(255, 255, 255);
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    border: 2px solid #b6a232; /* Fixed the border */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Compacta', sans-serif;
+    display: none;
+    margin-top: 5px;
+    box-shadow: 0 0 12px rgba(182, 162, 50, 0.7); /* Optional soft gold glow */
+}
+
+/* VICTORY SCREEN */
+.victory-card {
+    background-color: rgba(34, 139, 34, 0.9); /* Forest green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Compacta', sans-serif;
+}
+
+.victory-card h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.victory-fighter-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.victory-card-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.victory-play-again {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Compacta', sans-serif;
+}
+
+.victory-play-again:hover {
+    background-color: darkgray;
+}
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding:  15px; /* Adds safe spacing */
+    }
+
+    .feedback-box {
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 95%;
+    }
+
+    .input-box {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column; /* Stack input & button on smaller screens */
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 85%;
+        text-align: center;
+    }
+
+    button {
+        width: 85%;
+        margin-top: 5px;
+
+    }
+
+    .previous-guesses-container {
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .guess-wrapper {
+        overflow-x: auto;
+        white-space: nowrap;
+        min-width: 800px;
+    }
+
+    .headerRowContainer {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        min-width: 800px;
+    }
+
+    .guess-row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        min-width: 800px;
+    }
+
+    .hint-box {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 12px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 0px;
+        border: 1px solid white;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        word-wrap: break-word;
+        padding: 5px;
+        box-sizing: border-box;
+        line-height: 1.1;
+        transform: rotateY(90deg); /* Hidden initially */
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        backface-visibility: hidden; /* Stops flickering */
+        overflow: hidden;
+        gap: 10px;
+        text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+        white-space: normal; /* Ensures text wraps */
+    }
+
+    .hints-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hint-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .victory-card {
+        max-width: 90%;
+    }
+}

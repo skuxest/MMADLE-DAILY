@@ -525,6 +525,12 @@ button:hover {
 
 /* === MOBILE RESPONSIVENESS === */
 @media (max-width: 768px) {
+
+    body {
+        width: 100%;
+    };
+
+    
     .container {
         width: 100%;
         padding:  15px; /* Adds safe spacing */

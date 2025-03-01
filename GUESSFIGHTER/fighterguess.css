@@ -532,13 +532,44 @@ button:hover {
         padding: 0;
         overflow-x: hidden; /* Prevents horizontal scrolling */
     }
+
+    body {
+        background: url('../IMAGES/BACKGROUNDFINAL.png') no-repeat center center fixed;
+        background-size: cover; /* Ensures it covers the whole screen */
+        background-position: center; /* Centers the background */
+        background-attachment: fixed; /* Prevents scrolling issues */
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden; /* Prevents scrolling to the right */
+    }
+
     .container {
         width: 100%;
         padding:  15px; /* Adds safe spacing */
     }
 
     .logo {
-        width: 80%
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 80%; /* Full width to ensure centering */
+    max-width: 400px; /* Adjust if needed */
+    margin: 0 auto; /* Centers the logo */
+    text-align: center;
+    padding: 10px 0;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto; /* Ensures the image itself is centered */
+        max-width: 100%; /* Prevents it from overflowing */
+        height: auto;
     }
 
     .feedback-box {

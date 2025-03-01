@@ -525,6 +525,13 @@ button:hover {
 
 /* === MOBILE RESPONSIVENESS === */
 @media (max-width: 768px) {
+
+    body, html {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
     .container {
         width: 100%;
         padding:  15px; /* Adds safe spacing */

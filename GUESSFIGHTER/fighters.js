@@ -59,7 +59,7 @@ const fighters = [
     wins: 24,
     debutYear: 2013,
     weightClass: ["Strawweight"],
-    image: "../FIGHTER-IMAGES/WEILI-ZHANG.png",
+    image: "../FIGHTER-IMAGES/ZHANG-WEILI.png",
     hints: {
         style: "Striking",
         lastAppearance: "UFC 298",

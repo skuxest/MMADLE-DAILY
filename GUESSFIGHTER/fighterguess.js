@@ -1,17 +1,55 @@
 let attempts = 0;
-let correctFighter = fighters[Math.floor(Math.random() * fighters.length)];
+let correctFighter = getDailyFighter();
+updateHintsState(); // Ensures hints are set properly when the game starts
 let guessedFighters = []; // Tracks fighters the player has guessed
 
 
 const inputField = document.getElementById("fighterInput");
 const submitButton = document.getElementById("submitGuess");
-const resetButton = document.getElementById("resetGame");
+/*const resetButton = document.getElementById("resetGame");*/
 const previousGuessesContainer = document.getElementById("previousGuesses");
 const resultMessage = document.getElementById("resultMessage");
 
 const dropdown = document.createElement("div");
 dropdown.classList.add("autocomplete-dropdown");
 inputField.parentNode.appendChild(dropdown);
+
+function restorePreviousSession() {
+    const lastPlayedDate = localStorage.getItem("lastPlayedDate");
+    const todayDate = new Date().toDateString();
+
+    if (lastPlayedDate === todayDate) {
+        console.log("Restoring previous session...");
+
+        // Restore guesses
+        const storedGuesses = JSON.parse(localStorage.getItem("guessedFighters")) || [];
+        guessedFighters = storedGuesses;
+        
+        storedGuesses.forEach(guessedName => {
+            const guessedFighter = fighters.find(fighter => fighter.name === guessedName);
+            if (guessedFighter) {
+                addPreviousGuess(guessedFighter, guessedFighter.name === correctFighter.name);
+            }
+        });
+
+        // Restore attempts
+        attempts = parseInt(localStorage.getItem("attempts")) || 0;
+        updateHintsState();
+
+        // Restore victory card if they won
+        if (localStorage.getItem("gameWon") === "true") {
+            const storedFighter = JSON.parse(localStorage.getItem("correctFighter"));
+            showVictoryCard(storedFighter);
+        }
+    }
+}
+
+function getDailyFighter() {
+    const today = new Date();
+    const dayNumber = today.getFullYear() * 1000 + today.getMonth() * 100 + today.getDate(); 
+    const index = dayNumber % fighters.length; // Ensures the same fighter is chosen daily
+    return fighters[index];
+}
 
 function positionDropdown() {
     dropdown.style.left = `${inputField.offsetLeft}px`;
@@ -73,35 +111,60 @@ function handleEnterSubmit(event) {
 }
 
 function checkGuess() {
-    attempts++;
+    console.log("Checking guess...");
+
+    const lastPlayedDate = localStorage.getItem("lastPlayedDate");
+    const todayDate = new Date().toDateString();
+
+    if (lastPlayedDate === todayDate) {
+        console.log("User has already played today. Restoring session...");
+        restorePreviousSession(); // Show their past game instead of blocking them
+        return;
+    }
+
     const userGuess = inputField.value.trim().toLowerCase();
     if (!userGuess) return;
 
     const guessedFighter = fighters.find(fighter => fighter.name.toLowerCase() === userGuess);
-    if (guessedFighter) {
-        if (guessedFighters.includes(guessedFighter.name)) {
-            displayResultMessage(`❌ You already guessed ${guessedFighter.name}! Try someone else.`, "orange");
-            return; // Stop further processing
-        }
     
-        guessedFighters.push(guessedFighter.name); // Add fighter to guessed list
-    
-        createHeaderRow();
-        if (guessedFighter.name === correctFighter.name) {
-            addPreviousGuess(guessedFighter, true);
-        } else {
-            addPreviousGuess(guessedFighter, false);
-        }
+    if (!guessedFighter) {
+        displayResultMessage("❌ Fighter not found. Try again!", "red");
+        return;
     }
-    
+
+    if (guessedFighters.includes(guessedFighter.name)) {
+        displayResultMessage(`⚠️ You already guessed ${guessedFighter.name}! Try someone else.`, "orange");
+        return;
+    }
+
+    console.log(`User guessed: ${guessedFighter.name}`);
+    guessedFighters.push(guessedFighter.name); // Add to guessed list
+    localStorage.setItem("guessedFighters", JSON.stringify(guessedFighters)); // Save to storage
+
+    createHeaderRow();
+
+    if (guessedFighter.name === correctFighter.name) {
+        console.log("Correct guess!");
+        addPreviousGuess(guessedFighter, true);
+        localStorage.setItem("lastPlayedDate", todayDate);
+        localStorage.setItem("gameWon", "true"); // Mark game as won
+        localStorage.setItem("correctFighter", JSON.stringify(correctFighter)); // Store fighter
+        showVictoryCard(correctFighter);
+    } else {
+        console.log("Incorrect guess.");
+        addPreviousGuess(guessedFighter, false);
+    }
+
+    attempts++; 
+    localStorage.setItem("attempts", attempts); // Store attempts
+
+    console.log(`Total attempts: ${attempts}`);
+    updateHintsState(guessedFighter.name === correctFighter.name);
+ 
 
     inputField.value = "";
     dropdown.style.display = "none";
-
-    // Check if we need to enable hints
-    updateHintsState();
 }
-
 
 function addPreviousGuess(guessedFighter, isCorrect = false) {
     const guessRow = document.createElement("div");
@@ -134,7 +197,7 @@ function addPreviousGuess(guessedFighter, isCorrect = false) {
         setTimeout(() => {
             displayResultMessage(`🎉 Correct! The fighter was <b>${correctFighter.name}</b>!`, "green");
             submitButton.disabled = true;
-            resetButton.style.display = "block";
+            /*resetButton.style.display = "block";*/
     
             launchConfetti(); // Confetti explosion
             showVictoryCard(correctFighter);
@@ -198,7 +261,7 @@ function createHeaderRow() {
     }
 }
 
-function updateHintsState() {
+function updateHintsState(isCorrectGuess = false) {
     const hint1Image = document.getElementById("hint1Image");
     const hint2Image = document.getElementById("hint2Image");
     const hint3Image = document.getElementById("hint3Image");
@@ -207,51 +270,34 @@ function updateHintsState() {
     const hint2Countdown = document.getElementById("hint2Countdown");
     const hint3Countdown = document.getElementById("hint3Countdown");
 
-    // Hint 1 unlocks after 5 attempts
-    if (attempts >= 5) {
+    if (isCorrectGuess) {
+        // Instantly unlock all hints if the player guessed correctly
         hint1Image.classList.remove('disabled-hint');
         hint1Image.classList.add('enabled-hint');
-        hint1Countdown.textContent = "Style clue";
-    } else {
-        const remaining = 5 - attempts;
-        hint1Countdown.textContent = `Style clue in ${remaining} ${remaining === 1 ? 'try' : 'tries'}`;
-    }
+        hint1Countdown.textContent = "Style clue available!";
 
-    // Hint 2 unlocks after 8 attempts
-    if (attempts >= 8) {
         hint2Image.classList.remove('disabled-hint');
         hint2Image.classList.add('enabled-hint');
-        hint2Countdown.textContent = "Last appearance clue";
-    } else {
-        const remaining = 8 - attempts;
-        hint2Countdown.textContent = `Last appearance clue in ${remaining} ${remaining === 1 ? 'try' : 'tries'}`;
-    }
+        hint2Countdown.textContent = "Last appearance clue available!";
 
-    // Hint 3 (Nickname) unlocks after 10 attempts
-    if (attempts >= 10) {
         hint3Image.classList.remove('disabled-hint');
         hint3Image.classList.add('enabled-hint');
-        hint3Countdown.textContent = "Nickname clue";
-    } else {
-        const remaining = 10 - attempts;
-        hint3Countdown.textContent = `Nickname clue in ${remaining} ${remaining === 1 ? 'try' : 'tries'}`;
+        hint3Countdown.textContent = "Nickname clue available!";
+
+        return; // Skip the attempt-based unlocking
     }
+
+    // If the correct guess hasn't been made, follow the normal unlocking process
+    hint1Countdown.textContent = attempts >= 5 ? "Style clue available" : `Style clue in ${5 - attempts} tries`;
+    hint2Countdown.textContent = attempts >= 8 ? "Last appearance clue available" : `Last appearance clue in ${8 - attempts} tries`;
+    hint3Countdown.textContent = attempts >= 10 ? "Nickname clue available" : `Nickname clue in ${10 - attempts} tries`;
+
+    hint1Image.classList.toggle("enabled-hint", attempts >= 5);
+    hint2Image.classList.toggle("enabled-hint", attempts >= 8);
+    hint3Image.classList.toggle("enabled-hint", attempts >= 10);
 }
 
 
-function revealHint1() {
-    if (!document.getElementById("hint1Image").classList.contains("enabled-hint")) return;
-    const hint1Popdown = document.getElementById("hint1Popdown");
-    hint1Popdown.style.display = "block";
-    hint1Popdown.textContent = `Fighting Style: ${correctFighter.hints.style}`;
-}
-
-function revealHint2() {
-    if (!document.getElementById("hint2Image").classList.contains("enabled-hint")) return;
-    const hint2Popdown = document.getElementById("hint2Popdown");
-    hint2Popdown.style.display = "block";
-    hint2Popdown.textContent = `Last UFC Appearance: ${correctFighter.hints.lastAppearance}`;
-}
 
 function displayResultMessage(message, color) {
     resultMessage.innerHTML = message;
@@ -278,83 +324,79 @@ function showVictoryCard(fighter) {
 
     victoryCard.style.display = "block";
 
-    // Smooth scroll to the victory card
+    // Get all hint boxes that need to flip
+    const hintBoxes = document.querySelectorAll(".hint-box");
+    let lastFlipTime = 0; // Track the last hint flip time
+
+    hintBoxes.forEach((box, index) => {
+        let flipTime = index * 300; // Adjusted to 300ms per flip (faster)
+        lastFlipTime = flipTime; // Update last flip time
+        
+        setTimeout(() => {
+            box.classList.add("revealed");
+        }, flipTime);
+    });
+
+    // Scroll to victory card slightly after the last hint flips
     setTimeout(() => {
         victoryCard.scrollIntoView({ behavior: "smooth" });
-    }, 300); // Optional slight delay
+    }, lastFlipTime + 300); // 300ms buffer for a smooth transition
 }
 
+function updateNextGameTimer() {
+    const now = new Date();
+    const tomorrow = new Date();
+    tomorrow.setHours(24, 0, 0, 0); // Reset at midnight
+
+    const timeLeft = tomorrow - now;
+    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("nextGameTimer").textContent =
+        `⏳ Next fighter available in: ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+// Update the countdown every second
+setInterval(updateNextGameTimer, 1000);
+updateNextGameTimer(); // Call immediately on page load
+
+
+// Update the countdown every minute
+setInterval(updateNextGameTimer, 60000);
+updateNextGameTimer(); // Call immediately on page load
 
 function resetGame() {
-    correctFighter = fighters[Math.floor(Math.random() * fighters.length)];
-    guessedFighters = [];
+    const todayDate = new Date().toDateString();
+    const lastPlayedDate = localStorage.getItem("lastPlayedDate");
+
+    if (lastPlayedDate === todayDate) {
+        displayResultMessage("🚫 You’ve already played today! Come back tomorrow.", "orange");
+        return;
+    }
+
+    correctFighter = getDailyFighter(); // Select the new daily fighter
+    guessedFighters = []; // Reset guessed fighters list
 
     document.getElementById("headerRowContainer").innerHTML = "";
     document.getElementById("previousGuesses").innerHTML = "";
     displayResultMessage("", "black");
     submitButton.disabled = false;
-    resetButton.style.display = "none";
+   /*resetButton.style.display = "none";*/
     attempts = 0;
 
-    document.getElementById("victoryCard").style.display = "none";
-
-    // Reset hints...
-}
-
-{
-    const hint1Image = document.getElementById("hint1Image");
-    const hint2Image = document.getElementById("hint2Image");
-    const hint3Image = document.getElementById("hint3Image");
-
-    const hint1Countdown = document.getElementById("hint1Countdown");
-    const hint2Countdown = document.getElementById("hint2Countdown");
-    const hint3Countdown = document.getElementById("hint3Countdown");
-
-    hint1Image.classList.add('disabled-hint');
-    hint1Image.classList.remove('enabled-hint');
-    hint2Image.classList.add('disabled-hint');
-    hint2Image.classList.remove('enabled-hint');
-    hint3Image.classList.add('disabled-hint');
-    hint3Image.classList.remove('enabled-hint');
-
-    hint1Countdown.textContent = "Style clue in 5 tries";
-    hint2Countdown.textContent = "Last appearance clue in 8 tries";
-    hint3Countdown.textContent = "Nickname clue in 10 tries";
-
-    document.getElementById("hint1Popdown").style.display = "none";
-    document.getElementById("hint2Popdown").style.display = "none";
-    document.getElementById("hint3Popdown").style.display = "none";
+    console.log("New daily fighter:", correctFighter.name); // Debugging
+    updateHintsState(); // Ensures hints match the new fighter
 }
 
 submitButton.addEventListener("click", checkGuess);
-resetButton.addEventListener("click", resetGame);
 inputField.addEventListener("keypress", handleEnterSubmit);
 inputField.addEventListener("input", () => filterFighters(inputField.value));
 inputField.addEventListener("focus", positionDropdown);
 window.addEventListener("resize", positionDropdown);
-document.getElementById("hint1Image").addEventListener("click", function () {
-    const hint1Image = document.getElementById("hint1Image");
-    if (hint1Image.classList.contains("enabled-hint")) {
-        const hint1Popdown = document.getElementById("hint1Popdown");
-        hint1Popdown.style.display = "block";
-        hint1Popdown.textContent = `Fighting Style: ${correctFighter.hints.style}`;
-    }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    restorePreviousSession();
 });
 
-document.getElementById("hint2Image").addEventListener("click", function () {
-    const hint2Image = document.getElementById("hint2Image");
-    if (hint2Image.classList.contains("enabled-hint")) {
-        const hint2Popdown = document.getElementById("hint2Popdown");
-        hint2Popdown.style.display = "block";
-        hint2Popdown.textContent = `Last UFC Appearance: ${correctFighter.hints.lastAppearance}`;
-    }
-});
-
-document.getElementById("hint3Image").addEventListener("click", function () {
-    const hint3Image = document.getElementById("hint3Image");
-    if (hint3Image.classList.contains("enabled-hint")) {
-        const hint3Popdown = document.getElementById("hint3Popdown");
-        hint3Popdown.style.display = "block";
-        hint3Popdown.textContent = `Nickname: "${correctFighter.hints.nickname}"`;
-    }
-});

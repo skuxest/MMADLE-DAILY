@@ -274,7 +274,7 @@ const fighters = [
     weightClass: ["Light Heavyweight"],
     image: "../FIGHTER-IMAGES/JAN-BLACHOWICZ.png",
     hints: {
-        style: "BJJ",
+        style: "BJJ,",
         lastAppearance: "UFC 310",
         nickname: "Prince of Cieszyn"
     }
@@ -307,7 +307,7 @@ const fighters = [
     wins: 23,
     debutYear: 2013,
     weightClass: ["Middleweight"],
-    image: "../FIGHTER-IMAGES/DRICUS-DU-PLESSIS.png",
+    image: "../FIGHTER-IMAGES/DRICUS-DU-DUPLESSIS.png",
     hints: {
         style: "Kickboxing",
         lastAppearance: "UFC 312",
@@ -768,7 +768,7 @@ nickname: "Rush"
         fights: 27,
         wins: 23,
         debutYear: 2011,
-        weightClass: ["Bantamweight/Featherweight"],
+        weightClass: ["Bantamweight, Featherweight"],
         image: "../FIGHTER-IMAGES/ALJAMAIN-STERLING.png",
         hints: {
             style: "BJJ",

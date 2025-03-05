@@ -362,17 +362,24 @@ function showVictoryCard(fighter) {
 
     victoryCard.style.display = "block";
 
-    // Get all hint boxes that need to flip
-    const hintBoxes = document.querySelectorAll(".hint-box");
+    // Find only the latest row of hint boxes (from the last guess)
+    const latestGuessRow = document.querySelector(".guess-row");
+    if (!latestGuessRow) {
+        // If no latest guess row exists, scroll immediately
+        victoryCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+    }
+
+    const hintBoxes = latestGuessRow.querySelectorAll(".hint-box");
     if (hintBoxes.length === 0) {
         // If no hint boxes exist, scroll immediately
         victoryCard.scrollIntoView({ behavior: "smooth", block: "center" });
         return;
     }
 
-    let lastFlipTime = hintBoxes.length * 300; // 300ms per flip
+    let lastFlipTime = hintBoxes.length * 300; // 300ms per flip for the last row only
 
-    // Flip hints sequentially
+    // Flip only the latest row of hints sequentially
     hintBoxes.forEach((box, index) => {
         setTimeout(() => {
             box.classList.add("revealed");
@@ -384,7 +391,6 @@ function showVictoryCard(fighter) {
         victoryCard.scrollIntoView({ behavior: "smooth", block: "center" });
     }, lastFlipTime + 300); // Small buffer for smooth transition
 }
-
 
 function updateNextGameTimer() {
     const now = new Date();

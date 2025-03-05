@@ -364,22 +364,27 @@ function showVictoryCard(fighter) {
 
     // Get all hint boxes that need to flip
     const hintBoxes = document.querySelectorAll(".hint-box");
-    let lastFlipTime = 0; // Track the last hint flip time
+    if (hintBoxes.length === 0) {
+        // If no hint boxes exist, scroll immediately
+        victoryCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+    }
 
+    let lastFlipTime = hintBoxes.length * 300; // 300ms per flip
+
+    // Flip hints sequentially
     hintBoxes.forEach((box, index) => {
-        let flipTime = index * 300; // Flip every 300ms
-        lastFlipTime = flipTime; // Update last flip time
-
         setTimeout(() => {
             box.classList.add("revealed");
-        }, flipTime);
+        }, index * 300);
     });
 
-    // Scroll to victory card right after the last hint box flips
+    // Scroll to victory card **right after the last hint flips**
     setTimeout(() => {
         victoryCard.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, lastFlipTime + 500); // Small buffer after last flip
+    }, lastFlipTime + 300); // Small buffer for smooth transition
 }
+
 
 function updateNextGameTimer() {
     const now = new Date();

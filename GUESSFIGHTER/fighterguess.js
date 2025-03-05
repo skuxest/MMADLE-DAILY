@@ -297,7 +297,45 @@ function updateHintsState(isCorrectGuess = false) {
     hint3Image.classList.toggle("enabled-hint", attempts >= 10);
 }
 
+function setupHintListeners() {
+    const hint1Image = document.getElementById("hint1Image");
+    const hint2Image = document.getElementById("hint2Image");
+    const hint3Image = document.getElementById("hint3Image");
 
+    // Ensure hints toggle on both click and touchstart
+    hint1Image.addEventListener("click", revealHint1);
+    hint1Image.addEventListener("touchstart", revealHint1);
+
+    hint2Image.addEventListener("click", revealHint2);
+    hint2Image.addEventListener("touchstart", revealHint2);
+
+    hint3Image.addEventListener("click", revealHint3);
+    hint3Image.addEventListener("touchstart", revealHint3);
+}
+
+function revealHint1() {
+    if (!document.getElementById("hint1Image").classList.contains("enabled-hint")) return;
+    const hint1Popdown = document.getElementById("hint1Popdown");
+    hint1Popdown.style.display = "block";
+    hint1Popdown.textContent = `Fighting Style: ${correctFighter.hints.style}`;
+}
+
+function revealHint2() {
+    if (!document.getElementById("hint2Image").classList.contains("enabled-hint")) return;
+    const hint2Popdown = document.getElementById("hint2Popdown");
+    hint2Popdown.style.display = "block";
+    hint2Popdown.textContent = `Last UFC Appearance: ${correctFighter.hints.lastAppearance}`;
+}
+
+function revealHint3() {
+    if (!document.getElementById("hint3Image").classList.contains("enabled-hint")) return;
+    const hint3Popdown = document.getElementById("hint3Popdown");
+    hint3Popdown.style.display = "block";
+    hint3Popdown.textContent = `Nickname: "${correctFighter.hints.nickname}"`;
+}
+
+// Call this function once after the page loads
+document.addEventListener("DOMContentLoaded", setupHintListeners);
 
 function displayResultMessage(message, color) {
     resultMessage.innerHTML = message;

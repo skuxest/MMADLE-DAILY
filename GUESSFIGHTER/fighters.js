@@ -318,7 +318,7 @@ const fighters = [
     name: "Khamzat Chimaev",
     age: 31,
     gender: "Male",
-    country: ["Sweden"],
+    country: ["Sweden, UAE"],
     fights: 14,
     wins: 14,
     debutYear: 2018,

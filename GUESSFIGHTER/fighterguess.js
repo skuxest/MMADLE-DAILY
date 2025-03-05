@@ -367,18 +367,18 @@ function showVictoryCard(fighter) {
     let lastFlipTime = 0; // Track the last hint flip time
 
     hintBoxes.forEach((box, index) => {
-        let flipTime = index * 300; // Adjusted to 300ms per flip (faster)
+        let flipTime = index * 300; // Flip every 300ms
         lastFlipTime = flipTime; // Update last flip time
-        
+
         setTimeout(() => {
             box.classList.add("revealed");
         }, flipTime);
     });
 
-    // Scroll to victory card slightly after the last hint flips
+    // Scroll to victory card right after the last hint box flips
     setTimeout(() => {
-        victoryCard.scrollIntoView({ behavior: "smooth" });
-    }, lastFlipTime + 300); // 300ms buffer for a smooth transition
+        victoryCard.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, lastFlipTime + 500); // Small buffer after last flip
 }
 
 function updateNextGameTimer() {

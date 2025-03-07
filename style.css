@@ -48,6 +48,7 @@ body {
 
 /* White semi-transparent overlay */
 .coming-soon::after {
+    width: 500px;
     content: "COMING SOON"; /* Text overlay */
     font-size:larger;
     color: grey;
@@ -68,6 +69,7 @@ body {
     backdrop-filter: blur(3px); /* Slight blur for better effect */
     border-radius: 5px; /* Matches button/image styling */
     pointer-events: none; /* Ensures clicks don’t go through */
+    border-radius: 15px; /* Rounds the corners */
 }
 
 /* === GAME IMAGE BUTTONS (GUESS THE FIGHTER & MYSTERY QUOTE) === */

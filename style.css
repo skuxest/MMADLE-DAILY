@@ -131,8 +131,11 @@ body {
     }
 }
 
-.logo {
-    flex-shrink: 0; /* Prevents unintended resizing */
-    align-self: center; /* Keeps it centered */
-    width: 80%
+.logo img {
+    width: 150px;  /* Adjust to your preferred size */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures no extra spacing */
+    margin: 0 auto; /* Centers it horizontally */
+    max-width: 100%; /* Prevents it from overflowing */
 }
+

@@ -48,7 +48,6 @@ body {
 
 /* White semi-transparent overlay */
 .coming-soon::after {
-    width: 500px;
     content: "COMING SOON"; /* Text overlay */
     font-size:xx-large;
     color: grey;
@@ -130,4 +129,8 @@ body {
     .game-image {
         width: 80%; /* Adjust image size for mobile */
     }
+}
+
+.logo {
+    width: 80%
 }

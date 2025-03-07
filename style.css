@@ -132,7 +132,7 @@ body {
 }
 
 .logo img {
-    width: 150px;  /* Adjust to your preferred size */
+    width: 280px;  /* Adjust to your preferred size */
     height: auto; /* Maintains aspect ratio */
     display: block; /* Ensures no extra spacing */
     margin: 0 auto; /* Centers it horizontally */

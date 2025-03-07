@@ -132,5 +132,7 @@ body {
 }
 
 .logo {
+    flex-shrink: 0; /* Prevents unintended resizing */
+    align-self: center; /* Keeps it centered */
     width: 80%
 }

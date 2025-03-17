@@ -51,6 +51,99 @@ function getDailyFighter() {
     return fighters[index];
 }
 
+// Get elements
+const openFighterButton = document.getElementById("openFighterButton");
+const fighterModal = document.getElementById("fighterModal");
+const closeFighterButton = document.querySelector(".close-fighter");
+
+// Open Fighter Roster Modal
+openFighterButton.addEventListener("click", function () {
+    fighterModal.style.display = "block";
+});
+
+// Close Fighter Roster Modal
+closeFighterButton.addEventListener("click", function () {
+    fighterModal.style.display = "none";
+});
+
+// Close Fighter Roster Modal when clicking outside of it
+window.addEventListener("click", function (event) {
+    if (event.target === fighterModal) {
+        fighterModal.style.display = "none";
+    }
+});
+
+
+// Sample patch notes (You can replace this with dynamic content later)
+const patchNotes = [
+    { date: "March 10, 2025", update: "Added new fighters to the roster." },
+    { date: "March 5, 2025", update: "Fixed a bug with the fighter selection UI." },
+    { date: "February 28, 2025", update: "Improved website performance and load times." },
+    { date: "February 20, 2025", update: "Introduced color indicators for game hints." }
+];
+
+// Open Patch Notes Modal
+document.getElementById("openPatchNotesButton").addEventListener("click", function() {
+    document.getElementById("patchNotesModal").style.display = "block";
+    populatePatchNotes();
+});
+
+// Close Patch Notes Modal
+document.querySelector(".close-patch-notes").addEventListener("click", function() {
+    document.getElementById("patchNotesModal").style.display = "none";
+});
+
+// Close Modal if clicked outside
+window.onclick = function(event) {
+    let modal = document.getElementById("patchNotesModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+// Populate Patch Notes List
+function populatePatchNotes() {
+    fetch('patch-notes.json')
+        .then(response => response.json())
+        .then(data => {
+            let patchNotesDiv = document.getElementById("patchNotesList");
+            patchNotesDiv.innerHTML = ""; // Clear previous content
+
+            data.forEach(note => {
+                let patchEntry = document.createElement("div");
+                patchEntry.innerHTML = `
+                    <strong>${note.date}</strong>
+                    <span>${note.update}</span>
+                `;
+                patchNotesDiv.appendChild(patchEntry);
+            });
+        })
+        .catch(error => console.error("Error loading patch notes:", error));
+}
+
+// Get elements
+const openContactButton = document.getElementById("openContactButton");
+const contactModal = document.getElementById("contactModal");
+const closeContactButton = document.querySelector(".close-contact");
+
+// Open Contact Modal
+openContactButton.addEventListener("click", function () {
+    contactModal.style.display = "block";
+});
+
+// Close Contact Modal
+closeContactButton.addEventListener("click", function () {
+    contactModal.style.display = "none";
+});
+
+// Close Contact Modal when clicking outside of it
+window.addEventListener("click", function (event) {
+    if (event.target === contactModal) {
+        contactModal.style.display = "none";
+    }
+});
+
+
 function positionDropdown() {
     dropdown.style.left = `${inputField.offsetLeft}px`;
     dropdown.style.top = `${inputField.offsetTop + inputField.offsetHeight}px`;
@@ -174,7 +267,7 @@ function addPreviousGuess(guessedFighter, isCorrect = false) {
         <div class="fighter-name-box">
             <img src="${guessedFighter.image}" class="fighter-face-icon" alt="${guessedFighter.name}">
         </div>
-        ${generateHintBox(guessedFighter.age, correctFighter.age)}
+        ${generateHintBox(guessedFighter.birthYear, correctFighter.birthYear)}
         ${generateHintBox(guessedFighter.gender, correctFighter.gender)}
         ${generateHintBox(guessedFighter.country, correctFighter.country, true)}
         ${generateHintBox(guessedFighter.fights, correctFighter.fights)}
@@ -249,7 +342,7 @@ function createHeaderRow() {
         headerRow.classList.add("guess-header");
         headerRow.innerHTML = `
             <div>Fighter</div>
-            <div>Age</div>
+            <div>Birth Year</div>
             <div>Gender</div>
             <div>Country</div>
             <div>Fights</div>

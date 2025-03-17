@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess The Fighter</title>
     <link rel="stylesheet" href="fighterguess.css">
+    <script src="fighterguess.js" defer></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWYWGH9WJQ"></script>
@@ -21,14 +22,167 @@
     <div class="container">
         <div class="logo"><img src="../IMAGES/FIGHTDLE-LOGO-FINALV2.png" alt="FIGHTDLE Logo"></div>
 
-        <div class="color-indicators-header"><p>COLOR INDICATORS</p></div>
+        <!-- INFO CONTAINER SECTION -->
+        <div class="info-container">
+            <!-- Fighter Roster Button with Hover Text -->
+            <img id="openFighterButton" src="../IMAGES/ROSTER2.png" alt="Fighter Roster" 
+                class="tooltip-hover" data-tooltip="Fighter Roster">
+
+            <!-- Patch Notes Button with Hover Text -->
+            <img id="openPatchNotesButton" src="../IMAGES/UPDATESLOGO2.png" alt="Patch Notes" 
+                class="tooltip-hover" data-tooltip="Updates">
+
+            <!-- Email Button -->
+             <img id="openContactButton" src="../IMAGES/EMAILLOGO.png" alt="Contact"
+                class="tooltip-hover" data-tooltip="Contact">
+        </div>
+            <!-- Fighter Roster Modal (Hidden Initially) -->
+       <!-- Fighter Roster Modal -->
+        <div id="fighterModal" class="fighter-modal">
+            <span class="close-fighter">&times;</span>
+            <h2 class="fighter-title">Fighter Roster</h2>
+            <div class="fighter-container">
+                <!-- Fighters will be manually added here -->
+                <div><strong>Aleksander Rakic</strong></div>
+                <div><strong>Alex Pereira</strong></div>
+                <div><strong>Alex Perez</strong></div>
+                <div><strong>Alexander Volkanovski</strong></div>
+                <div><strong>Alexander Volkov</strong></div>
+                <div><strong>Aljamain Sterling</strong></div>
+                <div><strong>Amanda Nunes</strong></div>
+                <div><strong>Anthony Smith</strong></div>
+                <div><strong>Arman Tsarukyan</strong></div>
+                <div><strong>Arnold Allen</strong></div>
+                <div><strong>Belal Muhammad</strong></div>
+                <div><strong>Beneil Dariush</strong></div>
+                <div><strong>Brandon Moreno</strong></div>
+                <div><strong>Brandon Royval</strong></div>
+                <div><strong>Brian Ortega</strong></div>
+                <div><strong>Chad Mendes</strong></div>
+                <div><strong>Charles Oliveira</strong></div>
+                <div><strong>Ciryl Gane</strong></div>
+                <div><strong>Colby Covington</strong></div>
+                <div><strong>Conor McGregor</strong></div>
+                <div><strong>Cory Sandhagen</strong></div>
+                <div><strong>Curtis Blaydes</strong></div>
+                <div><strong>Dan Hooker</strong></div>
+                <div><strong>Darren Till</strong></div>
+                <div><strong>Deiveson Figueiredo</strong></div>
+                <div><strong>Demetrious Johnson</strong></div>
+                <div><strong>Derrick Lewis</strong></div>
+                <div><strong>Dricus du Plessis</strong></div>
+                <div><strong>Dominick Cruz</strong></div>
+                <div><strong>Dustin Poirier</strong></div>
+                <div><strong>Frankie Edgar</strong></div>
+                <div><strong>Francis Ngannou</strong></div>
+                <div><strong>Georges St-Pierre</strong></div>
+                <div><strong>Gilbert Burns</strong></div>
+                <div><strong>Glover Texeira</strong></div>
+                <div><strong>Henry Cejudo</strong></div>
+                <div><strong>Holly Holm</strong></div>
+                <div><strong>Ian Garry</strong></div>
+                <div><strong>Ilia Topuria</strong></div>
+                <div><strong>Islam Makhachev</strong></div>
+                <div><strong>Israel Adesanya</strong></div>
+                <div><strong>Jack Della Maddalena</strong></div>
+                <div><strong>Jalton Almeida</strong></div>
+                <div><strong>Jamahal Hill</strong></div>
+                <div><strong>Jan Blachowicz</strong></div>
+                <div><strong>Jared Cannonier</strong></div>
+                <div><strong>Jiri Prochazka</strong></div>
+                <div><strong>Johnny Walker</strong></div>
+                <div><strong>Jon Jones</strong></div>
+                <div><strong>Jorge Masvidal</strong></div>
+                <div><strong>Jose Aldo</strong></div>
+                <div><strong>Josh Emmett</strong></div>
+                <div><strong>Julianna Pena</strong></div>
+                <div><strong>Justin Gaethje</strong></div>
+                <div><strong>Kai Kara-France</strong></div>
+                <div><strong>Kamaru Usman</strong></div>
+                <div><strong>Kelvin Gastelum</strong></div>
+                <div><strong>Khabib Nurmagomedov</strong></div>
+                <div><strong>Khamzat Chimaev</strong></div>
+                <div><strong>Leon Edwards</strong></div>
+                <div><strong>Magomed Ankalaev</strong></div>
+                <div><strong>Marlon Vera</strong></div>
+                <div><strong>Marvin Vetorri</strong></div>
+                <div><strong>Mateusz Gamrot</strong></div>
+                <div><strong>Max Holloway</strong></div>
+                <div><strong>Merab Dvalishvili</strong></div>
+                <div><strong>Michael Chandler</strong></div>               
+                <div><strong>Michael Chiesa</strong></div>
+                <div><strong>Nassourdine Imavov</strong></div>
+                <div><strong>Paul Craig</strong></div>
+                <div><strong>Paulo Costa</strong></div>
+                <div><strong>Petr Yan</strong></div>
+                <div><strong>Rafael Fiziev</strong></div>
+                <div><strong>Rob Font</strong></div>
+                <div><strong>Robert Whittaker</strong></div>
+                <div><strong>Rose Namajunas</strong></div>
+                <div><strong>Ryan Spann</strong></div>
+                <div><strong>Sean O'Malley</strong></div>
+                <div><strong>Sean Strickland</strong></div>
+                <div><strong>Sergei Pavlovich</strong></div>
+                <div><strong>Sergey Spivak</strong></div>
+                <div><strong>Shavkat Rakhmonov</strong></div>
+                <div><strong>Song Yadong</strong></div>
+                <div><strong>Stipe Miocic</strong></div>
+                <div><strong>Stephen Thompson</strong></div>
+                <div><strong>Steve Erceg</strong></div>
+                <div><strong>Tai Tuivasa</strong></div>
+                <div><strong>Tom Aspinall</strong></div>
+                <div><strong>Tony Ferguson</strong></div>
+                <div><strong>Tyson Pedro</strong></div>
+                <div><strong>Umar Nurmagomedov</strong></div>
+                <div><strong>Valentina Shevchenko</strong></div>
+                <div><strong>Vicente Luque</strong></div>
+                <div><strong>Yair Rodriguez</strong></div>
+                <div><strong>Zhang Weili</strong></div>
+                             
+                <!-- Add the rest of the fighters manually -->
+            </div>
+        </div>
+
+            <!-- Patch Notes Modal -->
+        <div id="patchNotesModal" class="patch-modal">
+            <div class="patch-modal-content">
+                <span class="close-patch-notes">&times;</span>
+                <h2 class="patch-title">Patch Notes</h2>
+                <div class="patch-notes-container">
+                    <!-- Manually edit patch notes here -->
+                    <div>
+                        <strong>March 16, 2025</strong>
+                        <span>-Added 30+ new fighters<br>-Added patch notes<br>-Added fighter roster<br>-Added contact email address<br>-General UI adjustments<br></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info Popup -->
+        <div id="contactModal" class="contact-modal">
+            <span class="close-contact">&times;</span> <!-- Close button should be here -->
+            <div class="contact-modal-content">
+                <h2 class="contact-title">Contact Us</h2>
+                <p>Suggestions? Debugging? Loneliness? Feel free to flick us an email using the address below!</p>
+                <div class="contact-container">
+                    <div class="contact-entry">
+                        <strong>Email</strong>
+                        <span><a href="mailto:support@fightdle.com">support@fightdle.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
         <div class="feedback-box">
-            <div class="feedback-container"><img src="../IMAGES/RIGHT.png" class="feedback-item"><p class="indicator-label">RIGHT</p></div>
-            <div class="feedback-container"><img src="../IMAGES/WRONG.png" class="feedback-item"><p class="indicator-label">WRONG</p></div>
-            <div class="feedback-container"><img src="../IMAGES/PARTIAL.png" class="feedback-item"><p class="indicator-label">PARTIAL</p></div>
-            <div class="feedback-container"><img src="../IMAGES/MORE.png" class="feedback-item"><p class="indicator-label">HIGHER</p></div>
-            <div class="feedback-container"><img src="../IMAGES/LESS.png" class="feedback-item"><p class="indicator-label">LOWER</p></div>
+            <div class="color-indicators-header"><p>COLOR INDICATORS</p></div>
+            <div class="feedback-container-div">
+                <div class="feedback-container"><img src="../IMAGES/RIGHT.png" class="feedback-item"><p class="indicator-label">RIGHT</p></div>
+                <div class="feedback-container"><img src="../IMAGES/WRONG.png" class="feedback-item"><p class="indicator-label">WRONG</p></div>
+                <div class="feedback-container"><img src="../IMAGES/PARTIAL.png" class="feedback-item"><p class="indicator-label">PARTIAL</p></div>
+                <div class="feedback-container"><img src="../IMAGES/MORE.png" class="feedback-item"><p class="indicator-label">HIGHER</p></div>
+                <div class="feedback-container"><img src="../IMAGES/LESS.png" class="feedback-item"><p class="indicator-label">LOWER</p></div>
+            </div>
         </div>
 
         <div class="hints-container">

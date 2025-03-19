@@ -6,7 +6,7 @@ const fighters = [
         birthYear: 1988,
         gender: "Female",
         country: ["Brazil"],
-        fights: 27,
+        fights: 28,
         wins: 23,
         debutYear: 2013, // UFC debut
         weightClass: ["Bantamweight", "Featherweight"],
@@ -23,7 +23,7 @@ const fighters = [
         gender: "Female",
         country: ["Kyrgyzstan"],
         fights: 29,
-        wins: 23,
+        wins: 24,
         debutYear: 2015, // UFC debut
         weightClass: ["Flyweight", "Bantamweight"],
         image: "../FIGHTER-IMAGES/VALENTINA-SHEVCHENKO.png",
@@ -38,8 +38,8 @@ const fighters = [
         birthYear: 1992,
         gender: "Female",
         country: ["USA"],
-        fights: 20,
-        wins: 13,
+        fights: 21,
+        wins: 14,
         debutYear: 2014, // UFC debut
         weightClass: ["Strawweight", "Flyweight"],
         image: "../FIGHTER-IMAGES/ROSE-NAMAJUNAS.png",
@@ -54,8 +54,8 @@ const fighters = [
         birthYear: 1989,
         gender: "Female",
         country: ["China"],
-        fights: 28,
-        wins: 24,
+        fights: 29,
+        wins: 26,
         debutYear: 2018, // UFC debut
         weightClass: ["Strawweight"],
         image: "../FIGHTER-IMAGES/ZHANG-WEILI.png",
@@ -71,7 +71,7 @@ const fighters = [
         gender: "Female",
         country: ["USA"],
         fights: 18,
-        wins: 12,
+        wins: 13,
         debutYear: 2013, // UFC debut
         weightClass: ["Bantamweight"],
         image: "../FIGHTER-IMAGES/JULIANNA-PENA.png",
@@ -137,7 +137,7 @@ const fighters = [
     gender: "Male",
     country: ["France"],
     fights: 15,
-    wins: 12,
+    wins: 13,
     debutYear: 2019, // UFC debut
     weightClass: ["Heavyweight"],
     image: "../FIGHTER-IMAGES/CIRYL-GANE.png",
@@ -152,8 +152,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["Russia"],
-    fights: 20,
-    wins: 18,
+    fights: 22,
+    wins: 19,
     debutYear: 2018, // UFC debut
     weightClass: ["Heavyweight"],
     image: "../FIGHTER-IMAGES/SERGEI-PAVLOVICH.png",
@@ -168,8 +168,8 @@ const fighters = [
     birthYear: 1990,
     gender: "Male",
     country: ["USA"],
-    fights: 22,
-    wins: 17,
+    fights: 23,
+    wins: 18,
     debutYear: 2016, // UFC debut
     weightClass: ["Heavyweight"],
     image: "../FIGHTER-IMAGES/CURTIS-BLAYDES.png",
@@ -200,7 +200,7 @@ const fighters = [
     birthYear: 1982,
     gender: "Male",
     country: ["USA"],
-    fights: 24,
+    fights: 25,
     wins: 20,
     debutYear: 2011, // UFC debut
     weightClass: ["Heavyweight"],
@@ -232,7 +232,7 @@ const fighters = [
     birthYear: 1993,
     gender: "Male",
     country: ["Australia"],
-    fights: 20,
+    fights: 23,
     wins: 15,
     debutYear: 2017, // UFC debut
     weightClass: ["Heavyweight"],
@@ -249,7 +249,7 @@ const fighters = [
     gender: "Male",
     country: ["USA"],
     fights: 40,
-    wins: 27,
+    wins: 28,
     debutYear: 2014, // UFC debut
     weightClass: ["Heavyweight"],
     image: "../FIGHTER-IMAGES/DERRICK-LEWIS.png",
@@ -264,8 +264,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["Brazil"],
-    fights: 21,
-    wins: 19,
+    fights: 25,
+    wins: 22,
     debutYear: 2022, // UFC debut
     weightClass: ["Heavyweight"],
     image: "../FIGHTER-IMAGES/JAILTON-ALMEIDA.png",
@@ -277,14 +277,13 @@ const fighters = [
 },      
     
 /* LIGHT HEAVYWEIGHTS */
-    /* LIGHT HEAVYWEIGHTS */
 {
     name: "Alex Pereira",
     birthYear: 1987,
     gender: "Male",
     country: ["Brazil"],
-    fights: 12,
-    wins: 9,
+    fights: 15,
+    wins: 12,
     debutYear: 2021, // UFC debut
     weightClass: ["Light Heavyweight", "Middleweight"],
     image: "../FIGHTER-IMAGES/ALEX-PEREIRA.png",
@@ -300,7 +299,7 @@ const fighters = [
     gender: "Male",
     country: ["Russia"],
     fights: 23,
-    wins: 20,
+    wins: 21,
     debutYear: 2018, // UFC debut
     weightClass: ["Light Heavyweight"],
     image: "../FIGHTER-IMAGES/MAGOMED-ANKALAEV.png",
@@ -315,8 +314,8 @@ const fighters = [
     birthYear: 1992,
     gender: "Male",
     country: ["Czech Republic"],
-    fights: 34,
-    wins: 30,
+    fights: 37,
+    wins: 31,
     debutYear: 2020, // UFC debut
     weightClass: ["Light Heavyweight"],
     image: "../FIGHTER-IMAGES/JIRI-PROCHAZKA.png",
@@ -331,7 +330,7 @@ const fighters = [
     birthYear: 1990,
     gender: "Male",
     country: ["USA"],
-    fights: 14,
+    fights: 16,
     wins: 12,
     debutYear: 2020, // UFC debut
     weightClass: ["Light Heavyweight"],
@@ -363,8 +362,8 @@ const fighters = [
     birthYear: 1988,
     gender: "Male",
     country: ["USA"],
-    fights: 58,
-    wins: 37,
+    fights: 59,
+    wins: 38,
     debutYear: 2016, // UFC debut
     weightClass: ["Light Heavyweight", "Middleweight"],
     image: "../FIGHTER-IMAGES/ANTHONY-SMITH.png",
@@ -379,7 +378,7 @@ const fighters = [
     birthYear: 1979,
     gender: "Male",
     country: ["Brazil"],
-    fights: 41,
+    fights: 42,
     wins: 33,
     debutYear: 2012, // UFC debut
     weightClass: ["Light Heavyweight"],
@@ -395,7 +394,7 @@ const fighters = [
     birthYear: 1992,
     gender: "Male",
     country: ["Brazil"],
-    fights: 28,
+    fights: 31,
     wins: 21,
     debutYear: 2018, // UFC debut
     weightClass: ["Light Heavyweight"],
@@ -411,8 +410,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["USA"],
-    fights: 30,
-    wins: 21,
+    fights: 33,
+    wins: 22,
     debutYear: 2018, // UFC debut
     weightClass: ["Light Heavyweight"],
     image: "../FIGHTER-IMAGES/RYAN-SPANN.png",
@@ -427,7 +426,7 @@ const fighters = [
     birthYear: 1987,
     gender: "Male",
     country: ["Scotland"],
-    fights: 30,
+    fights: 26,
     wins: 17,
     debutYear: 2016, // UFC debut
     weightClass: ["Light Heavyweight", "Middleweight"],
@@ -443,7 +442,7 @@ const fighters = [
     birthYear: 1992,
     gender: "Male",
     country: ["Austria"],
-    fights: 18,
+    fights: 19,
     wins: 14,
     debutYear: 2017, // UFC debut
     weightClass: ["Light Heavyweight"],
@@ -454,8 +453,6 @@ const fighters = [
         nickname: "Rocket"
     }
 },
-
-/* MIDDLEWEIGHTS */
 
 /* MIDDLEWEIGHTS */
 {
@@ -511,8 +508,8 @@ const fighters = [
     birthYear: 1995,
     gender: "Male",
     country: ["France"],
-    fights: 17,
-    wins: 13,
+    fights: 20,
+    wins: 16,
     debutYear: 2020, // UFC debut
     weightClass: ["Middleweight"],
     image: "../FIGHTER-IMAGES/NASSOURDINE-IMAVOV.png",
@@ -543,8 +540,8 @@ const fighters = [
     birthYear: 1990,
     gender: "Male",
     country: ["Australia"],
-    fights: 34,
-    wins: 26,
+    fights: 35,
+    wins: 27,
     debutYear: 2012, // UFC debut
     weightClass: ["Middleweight", "Welterweight"],
     image: "../FIGHTER-IMAGES/ROBERT-WHITTAKER.png",
@@ -591,8 +588,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["USA"],
-    fights: 30,
-    wins: 18,
+    fights: 29,
+    wins: 19,
     debutYear: 2013, // UFC debut
     weightClass: ["Middleweight", "Welterweight"],
     image: "../FIGHTER-IMAGES/KELVIN-GASTELUM.png",
@@ -623,7 +620,7 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["Brazil"],
-    fights: 17,
+    fights: 18,
     wins: 14,
     debutYear: 2017, // UFC debut
     weightClass: ["Middleweight"],
@@ -635,7 +632,6 @@ const fighters = [
     }
 },
 
-/* WELTERWEIGHTS */
 /* WELTERWEIGHTS */
 {
     name: "Georges St-Pierre",
@@ -754,7 +750,7 @@ const fighters = [
     birthYear: 1982,
     gender: "Male",
     country: ["USA"],
-    fights: 25,
+    fights: 23,
     wins: 17,
     debutYear: 2012, // UFC debut
     weightClass: ["Welterweight"],
@@ -770,8 +766,8 @@ const fighters = [
     birthYear: 1994,
     gender: "Male",
     country: ["Kazakhstan"],
-    fights: 18,
-    wins: 18,
+    fights: 19,
+    wins: 19,
     debutYear: 2020, // UFC debut
     weightClass: ["Welterweight"],
     image: "../FIGHTER-IMAGES/SHAVKAT-RAKHMONOV.png",
@@ -802,8 +798,8 @@ const fighters = [
     birthYear: 1987,
     gender: "Male",
     country: ["USA"],
-    fights: 24,
-    wins: 16,
+    fights: 27,
+    wins: 20,
     debutYear: 2012, // UFC debut
     weightClass: ["Welterweight", "Lightweight"],
     image: "../FIGHTER-IMAGES/MICHAEL-CHIESA.png",
@@ -818,8 +814,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["Brazil"],
-    fights: 30,
-    wins: 22,
+    fights: 34,
+    wins: 23,
     debutYear: 2015, // UFC debut
     weightClass: ["Welterweight"],
     image: "../FIGHTER-IMAGES/VICENTE-LUQUE.png",
@@ -854,8 +850,8 @@ const fighters = [
     birthYear: 1992,
     gender: "Male",
     country: ["Russia"],
-    fights: 26,
-    wins: 25,
+    fights: 27,
+    wins: 26,
     debutYear: 2015, // UFC debut
     weightClass: ["Lightweight"],
     image: "../FIGHTER-IMAGES/ISLAM-MAKHACHEV.png",
@@ -886,7 +882,7 @@ const fighters = [
     birthYear: 1988,
     gender: "Male",
     country: ["USA"],
-    fights: 38,
+    fights: 40,
     wins: 30,
     debutYear: 2011, // UFC debut
     weightClass: ["Lightweight", "Featherweight"],
@@ -902,8 +898,8 @@ const fighters = [
     birthYear: 1988,
     gender: "Male",
     country: ["USA"],
-    fights: 28,
-    wins: 25,
+    fights: 31,
+    wins: 26,
     debutYear: 2017, // UFC debut
     weightClass: ["Lightweight"],
     image: "../FIGHTER-IMAGES/JUSTIN-GAETHJE.png",
@@ -934,8 +930,8 @@ const fighters = [
     birthYear: 1986,
     gender: "Male",
     country: ["USA"],
-    fights: 31,
-    wins: 24,
+    fights: 32,
+    wins: 23,
     debutYear: 2021, // UFC debut
     weightClass: ["Lightweight"],
     image: "../FIGHTER-IMAGES/MICHAEL-CHANDLER.png",
@@ -950,8 +946,8 @@ const fighters = [
     birthYear: 1983,
     gender: "Male",
     country: ["USA"],
-    fights: 36,
-    wins: 25,
+    fights: 37,
+    wins: 26,
     debutYear: 2011, // UFC debut
     weightClass: ["Lightweight", "Welterweight"],
     image: "../FIGHTER-IMAGES/TONY-FERGUSON.png",
@@ -966,8 +962,8 @@ const fighters = [
     birthYear: 1996,
     gender: "Male",
     country: ["Armenia"],
-    fights: 24,
-    wins: 21,
+    fights: 25,
+    wins: 22,
     debutYear: 2019, // UFC debut
     weightClass: ["Lightweight"],
     image: "../FIGHTER-IMAGES/ARMAN-TSARUKYAN.png",
@@ -982,7 +978,7 @@ const fighters = [
     birthYear: 1993,
     gender: "Male",
     country: ["Kyrgyzstan"],
-    fights: 15,
+    fights: 16,
     wins: 12,
     debutYear: 2019, // UFC debut
     weightClass: ["Lightweight"],
@@ -998,8 +994,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["Poland"],
-    fights: 26,
-    wins: 23,
+    fights: 28,
+    wins: 24,
     debutYear: 2020, // UFC debut
     weightClass: ["Lightweight"],
     image: "../FIGHTER-IMAGES/MATEUSZ-GAMROT.png",
@@ -1014,7 +1010,7 @@ const fighters = [
     birthYear: 1989,
     gender: "Male",
     country: ["Iran", "USA"],
-    fights: 30,
+    fights: 29,
     wins: 22,
     debutYear: 2014, // UFC debut
     weightClass: ["Lightweight"],
@@ -1049,7 +1045,7 @@ const fighters = [
     birthYear: 1986,
     gender: "Male",
     country: ["Brazil"],
-    fights: 45,
+    fights: 41,
     wins: 32,
     debutYear: 2011, // UFC debut
     weightClass: ["Featherweight", "Bantamweight"],
@@ -1130,7 +1126,7 @@ const fighters = [
     gender: "Male",
     country: ["USA"],
     fights: 35,
-    wins: 24,
+    wins: 23,
     debutYear: 2011, // UFC debut at Featherweight
     weightClass: ["Featherweight", "Lightweight", "Bantamweight"],
     image: "../FIGHTER-IMAGES/FRANKIE-EDGAR.png",
@@ -1161,7 +1157,7 @@ const fighters = [
     birthYear: 1992,
     gender: "Male",
     country: ["Mexico"],
-    fights: 21,
+    fights: 22,
     wins: 16,
     debutYear: 2014, // UFC debut
     weightClass: ["Featherweight"],
@@ -1177,7 +1173,7 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["USA"],
-    fights: 20,
+    fights: 21,
     wins: 16,
     debutYear: 2014, // UFC debut
     weightClass: ["Featherweight"],
@@ -1193,7 +1189,7 @@ const fighters = [
     birthYear: 1985,
     gender: "Male",
     country: ["USA"],
-    fights: 24,
+    fights: 23,
     wins: 19,
     debutYear: 2016, // UFC debut
     weightClass: ["Featherweight"],
@@ -1209,8 +1205,8 @@ const fighters = [
     birthYear: 1994,
     gender: "Male",
     country: ["United Kingdom"],
-    fights: 21,
-    wins: 19,
+    fights: 23,
+    wins: 20,
     debutYear: 2015, // UFC debut
     weightClass: ["Featherweight"],
     image: "../FIGHTER-IMAGES/ARNOLD-ALLEN.png",
@@ -1222,15 +1218,13 @@ const fighters = [
 },
 
 /* BANTAMWEIGHTS */
-
-/* BANTAMWEIGHTS */
 {
     name: "Aljamain Sterling",
     birthYear: 1989,
     gender: "Male",
     country: ["USA"],
-    fights: 27,
-    wins: 23,
+    fights: 29,
+    wins: 24,
     debutYear: 2014, // UFC debut
     weightClass: ["Bantamweight", "Featherweight"],
     image: "../FIGHTER-IMAGES/ALJAMAIN-STERLING.png",
@@ -1245,7 +1239,7 @@ const fighters = [
     birthYear: 1994,
     gender: "Male",
     country: ["USA"],
-    fights: 20,
+    fights: 21,
     wins: 18,
     debutYear: 2017, // UFC debut
     weightClass: ["Bantamweight"],
@@ -1261,8 +1255,8 @@ const fighters = [
     birthYear: 1992,
     gender: "Male",
     country: ["Russia"],
-    fights: 21,
-    wins: 16,
+    fights: 23,
+    wins: 18,
     debutYear: 2018, // UFC debut
     weightClass: ["Bantamweight"],
     image: "../FIGHTER-IMAGES/PETR-YAN.png",
@@ -1277,8 +1271,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["USA"],
-    fights: 20,
-    wins: 16,
+    fights: 22,
+    wins: 17,
     debutYear: 2018, // UFC debut
     weightClass: ["Bantamweight"],
     image: "../FIGHTER-IMAGES/CORY-SANDHAGEN.png",
@@ -1293,8 +1287,8 @@ const fighters = [
     birthYear: 1992,
     gender: "Male",
     country: ["Ecuador"],
-    fights: 30,
-    wins: 21,
+    fights: 34,
+    wins: 23,
     debutYear: 2014, // UFC debut
     weightClass: ["Bantamweight"],
     image: "../FIGHTER-IMAGES/MARLON-VERA.png",
@@ -1325,8 +1319,8 @@ const fighters = [
     birthYear: 1991,
     gender: "Male",
     country: ["Georgia"],
-    fights: 21,
-    wins: 17,
+    fights: 23,
+    wins: 19,
     debutYear: 2017, // UFC debut
     weightClass: ["Bantamweight"],
     image: "../FIGHTER-IMAGES/MERAB-DVALISHVILI.png",
@@ -1341,7 +1335,7 @@ const fighters = [
     birthYear: 1997,
     gender: "Male",
     country: ["China"],
-    fights: 30,
+    fights: 31,
     wins: 22,
     debutYear: 2017, // UFC debut
     weightClass: ["Bantamweight"],
@@ -1357,7 +1351,7 @@ const fighters = [
     birthYear: 1996,
     gender: "Male",
     country: ["Russia"],
-    fights: 17,
+    fights: 18,
     wins: 17,
     debutYear: 2021, // UFC debut
     weightClass: ["Bantamweight"],
@@ -1373,8 +1367,8 @@ const fighters = [
     birthYear: 1987,
     gender: "Male",
     country: ["USA"],
-    fights: 26,
-    wins: 20,
+    fights: 30,
+    wins: 22,
     debutYear: 2014, // UFC debut
     weightClass: ["Bantamweight"],
     image: "../FIGHTER-IMAGES/ROB-FONT.png",
@@ -1393,8 +1387,8 @@ const fighters = [
     birthYear: 1986,
     gender: "Male",
     country: ["USA"],
-    fights: 30,
-    wins: 25,
+    fights: 31,
+    wins: 27,
     debutYear: 2011, // UFC debut
     weightClass: ["Flyweight"],
     image: "../FIGHTER-IMAGES/DJ.png",
@@ -1409,8 +1403,8 @@ const fighters = [
     birthYear: 1993,
     gender: "Male",
     country: ["New Zealand"],
-    fights: 36,
-    wins: 24,
+    fights: 37,
+    wins: 25,
     debutYear: 2018, // UFC debut
     weightClass: ["Flyweight"],
     image: "../FIGHTER-IMAGES/KAI-KARA-FRANCE.png",
@@ -1425,8 +1419,8 @@ const fighters = [
     birthYear: 1994,
     gender: "Male",
     country: ["Mexico"],
-    fights: 31,
-    wins: 21,
+    fights: 32,
+    wins: 22,
     debutYear: 2016, // UFC debut
     weightClass: ["Flyweight"],
     image: "../FIGHTER-IMAGES/BRANDON-MORENO.png",
@@ -1457,8 +1451,8 @@ const fighters = [
     birthYear: 1993,
     gender: "Male",
     country: ["USA"],
-    fights: 21,
-    wins: 15,
+    fights: 24,
+    wins: 17,
     debutYear: 2020, // UFC debut
     weightClass: ["Flyweight"],
     image: "../FIGHTER-IMAGES/BRANDON-ROYVAL.png",
@@ -1473,8 +1467,8 @@ const fighters = [
     birthYear: 1990,
     gender: "Male",
     country: ["Brazil"],
-    fights: 31,
-    wins: 27,
+    fights: 34,
+    wins: 29,
     debutYear: 2017, // UFC debut
     weightClass: ["Flyweight"],
     image: "../FIGHTER-IMAGES/ALEXANDRE-PANTOJA.png",
@@ -1489,8 +1483,8 @@ const fighters = [
     birthYear: 1987,
     gender: "Male",
     country: ["Brazil"],
-    fights: 26,
-    wins: 22,
+    fights: 29,
+    wins: 24,
     debutYear: 2017, // UFC debut
     weightClass: ["Flyweight", "Bantamweight"],
     image: "../FIGHTER-IMAGES/DEIVESON-FIGUEIREDO.png",
@@ -1505,7 +1499,7 @@ const fighters = [
     birthYear: 1995,
     gender: "Male",
     country: ["Australia"],
-    fights: 14,
+    fights: 15,
     wins: 12,
     debutYear: 2023, // UFC debut
     weightClass: ["Flyweight"],

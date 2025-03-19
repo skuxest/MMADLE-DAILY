@@ -834,7 +834,7 @@ const fighters = [
     birthYear: 1997,
     gender: "Male",
     country: ["Ireland"],
-    fights: 14,
+    fights: 15,
     wins: 14,
     debutYear: 2021, // UFC debut
     weightClass: ["Welterweight"],

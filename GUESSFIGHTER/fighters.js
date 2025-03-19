@@ -29,7 +29,7 @@ const fighters = [
         image: "../FIGHTER-IMAGES/VALENTINA-SHEVCHENKO.png",
         hints: {
             style: "Muay Thai",
-            lastAppearance: "UFC 295",
+            lastAppearance: "UFC 306",
             nickname: "Bullet"
         }
     },
@@ -45,7 +45,7 @@ const fighters = [
         image: "../FIGHTER-IMAGES/ROSE-NAMAJUNAS.png",
         hints: {
             style: "BJJ",
-            lastAppearance: "UFC 300",
+            lastAppearance: "UFC Fight Night: Moreno vs Albazi",
             nickname: "Thug"
         }
     },
@@ -61,7 +61,7 @@ const fighters = [
         image: "../FIGHTER-IMAGES/ZHANG-WEILI.png",
         hints: {
             style: "Striking",
-            lastAppearance: "UFC 298",
+            lastAppearance: "UFC 312",
             nickname: "Magnum"
         }
     },
@@ -77,7 +77,7 @@ const fighters = [
         image: "../FIGHTER-IMAGES/JULIANNA-PENA.png",
         hints: {
             style: "BJJ",
-            lastAppearance: "UFC 292",
+            lastAppearance: "UFC 307",
             nickname: "The Venezuelan Vixen"
         }
     },
@@ -93,7 +93,7 @@ const fighters = [
         image: "../FIGHTER-IMAGES/HOLLY-HOLM.png",
         hints: {
             style: "Striking",
-            lastAppearance: "UFC 299",
+            lastAppearance: "UFC 300",
             nickname: "The Preachers Daughter"
         }
     },    
@@ -111,7 +111,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JON-JONES.png",
     hints: {
         style: "Wrestling/Striking",
-        lastAppearance: "UFC 285",
+        lastAppearance: "UFC 309",
         nickname: "Bones"
     }
 },
@@ -143,7 +143,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/CIRYL-GANE.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 285",
+        lastAppearance: "UFC 310",
         nickname: "Bon Gamin"
     }
 },
@@ -159,7 +159,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/SERGEI-PAVLOVICH.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 304",
+        lastAppearance: "UFC Fight Night: Adesanya vs Imavov",
         nickname: "No nickname"
     }
 },
@@ -191,7 +191,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ALEXANDER-VOLKOV.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 303",
+        lastAppearance: "UFC 310",
         nickname: "Drago"
     }
 },
@@ -207,7 +207,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/STIPE-MIOCIC.png",
     hints: {
         style: "Boxing/Wrestling",
-        lastAppearance: "UFC 295",
+        lastAppearance: "UFC 309",
         nickname: "Stone Cold"
     }
 },
@@ -239,7 +239,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/TAI-TUIVASA.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 293",
+        lastAppearance: "UFC 305",
         nickname: "Bam Bam"
     }
 },
@@ -255,7 +255,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/DERRICK-LEWIS.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 298",
+        lastAppearance: "UFC Fight Night: Lewis vs. Nasciment",
         nickname: "The Black Beast"
     }
 },
@@ -271,7 +271,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JAILTON-ALMEIDA.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 302",
+        lastAppearance: "UFC 311",
         nickname: "Malhadinho"
     }
 },      
@@ -321,7 +321,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JIRI-PROCHAZKA.png",
     hints: {
         style: "Striker",
-        lastAppearance: "UFC 312",
+        lastAppearance: "UFC 311",
         nickname: "BJP"
     }
 },
@@ -353,7 +353,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JAN-BLACHOWICZ.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 310",
+        lastAppearance: "UFC 291",
         nickname: "Prince of Cieszyn"
     }
 },
@@ -369,7 +369,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ANTHONY-SMITH.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 309",
+        lastAppearance: "UFC 310",
         nickname: "Lionheart"
     }
 },
@@ -401,7 +401,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JOHNNY-WALKER.png",
     hints: {
         style: "Muay Thai",
-        lastAppearance: "UFC 300",
+        lastAppearance: "UFC Fight Night: Whittaker vs. Aliskerov",
         nickname: "Big Johnny"
     }
 },
@@ -417,7 +417,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/RYAN-SPANN.png",
     hints: {
         style: "Wrestling",
-        lastAppearance: "UFC 297",
+        lastAppearance: "UFC Fight Night: Vettori vs. Dolidze 2",
         nickname: "Superman"
     }
 },
@@ -433,7 +433,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/PAUL-CRAIG.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 295",
+        lastAppearance: "UFC 309",
         nickname: "Bearjew"
     }
 },
@@ -449,7 +449,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ALEKSANDAR-RAKIC.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 302",
+        lastAppearance: "UFC 308",
         nickname: "Rocket"
     }
 },
@@ -483,7 +483,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/KHAMZAT-CHIMAEV.png",
     hints: {
         style: "Wrestling",
-        lastAppearance: "UFC 305",
+        lastAppearance: "UFC 308",
         nickname: "Borz"
     }
 },
@@ -515,7 +515,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/NASSOURDINE-IMAVOV.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 310",
+        lastAppearance: "UFC Fight Night: Adesanya vs. Imavov",
         nickname: "The Sniper"
     }
 },
@@ -531,7 +531,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ISRAEL-ADESANYA.png",
     hints: {
         style: "Kickboxing",
-        lastAppearance: "UFC 305",
+        lastAppearance: "UFC Fight Night: Adesanya vs. Imavov",
         nickname: "The Last Stylebender"
     }
 },
@@ -547,7 +547,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ROBERT-WHITTAKER.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 300",
+        lastAppearance: "UFC 308",
         nickname: "The Reaper"
     }
 },
@@ -563,7 +563,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/MARVIN-VETTORI.png",
     hints: {
         style: "Wrestling/Striking",
-        lastAppearance: "UFC 298",
+        lastAppearance: "UFC Fight Night: Vettori vs. Dolidze 2",
         nickname: "The Italian Dream"
     }
 },
@@ -579,7 +579,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JARED-CANNONIER.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 299",
+        lastAppearance: "UFC Fight Night: Cannonier vs. Rodrigues",
         nickname: "The Killa Gorilla"
     }
 },
@@ -595,7 +595,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/KELVIN-GASTELUM.png",
     hints: {
         style: "Boxing/Wrestling",
-        lastAppearance: "UFC 297",
+        lastAppearance: "UFC Fight Night: Whittaker vs. Aliskerov",
         nickname: "Mini Cain"
     }
 },
@@ -677,7 +677,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/KAMARU-USMAN.png",
     hints: {
         style: "Wrestling/Striking",
-        lastAppearance: "UFC 296",
+        lastAppearance: "UFC 294",
         nickname: "The Nigerian Nightmare"
     }
 },
@@ -693,7 +693,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/LEON-EDWARDS.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC London 2025",
+        lastAppearance: "UFC 304",
         nickname: "Rocky"
     }
 },
@@ -709,7 +709,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/COLBY-COVINGTON.png",
     hints: {
         style: "Wrestling/Striking",
-        lastAppearance: "UFC 296",
+        lastAppearance: "UFC Fight Night: Covington vs. Buckley",
         nickname: "Chaos"
     }
 },
@@ -725,7 +725,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/GILBERT-BURNS.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 294",
+        lastAppearance: "UFC Fight Night: Burns vs. Brady",
         nickname: "Durinho"
     }
 },
@@ -757,7 +757,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/STEPHEN-THOMPSON.png",
     hints: {
         style: "Karate",
-        lastAppearance: "UFC 291",
+        lastAppearance: "UFC 307",
         nickname: "Wonderboy"
     }
 },
@@ -773,7 +773,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/SHAVKAT-RAKHMONOV.png",
     hints: {
         style: "Wrestling/Striking",
-        lastAppearance: "UFC 300",
+        lastAppearance: "UFC 310",
         nickname: "Nomad"
     }
 },
@@ -805,7 +805,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/MICHAEL-CHIESA.png",
     hints: {
         style: "Grappling",
-        lastAppearance: "UFC 291",
+        lastAppearance: "UFC 310",
         nickname: "Maverick"
     }
 },
@@ -821,7 +821,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/VICENTE-LUQUE.png",
     hints: {
         style: "Striking/BJJ",
-        lastAppearance: "UFC 298",
+        lastAppearance: "UFC 310",
         nickname: "The Silent Assassin"
     }
 },
@@ -837,12 +837,10 @@ const fighters = [
     image: "../FIGHTER-IMAGES/IAN-GARRY.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 298",
+        lastAppearance: "UFC 310",
         nickname: "The Future"
     }
 },
-
-/* LIGHTWEIGHTS */
 
 /* LIGHTWEIGHTS */
 {
@@ -857,7 +855,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ISLAM-MAKHACHEV.png",
     hints: {
         style: "Wrestling/Sambo/Striking",
-        lastAppearance: "UFC 297",
+        lastAppearance: "UFC 311",
         nickname: "Eagle 2.0"
     }
 },
@@ -889,7 +887,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/DUSTIN-POIRIER.png",
     hints: {
         style: "Boxing",
-        lastAppearance: "UFC 291",
+        lastAppearance: "UFC 302",
         nickname: "The Diamond"
     }
 },
@@ -905,7 +903,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JUSTIN-GAETHJE.png",
     hints: {
         style: "Wrestling/Striking",
-        lastAppearance: "UFC 291",
+        lastAppearance: "UFC 313",
         nickname: "The Highlight"
     }
 },
@@ -921,7 +919,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/CHARLES-OLIVEIRA.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 280",
+        lastAppearance: "UFC 309",
         nickname: "Do Bronx"
     }
 },
@@ -937,7 +935,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/MICHAEL-CHANDLER.png",
     hints: {
         style: "Wrestling/Striking",
-        lastAppearance: "UFC 281",
+        lastAppearance: "UFC 309",
         nickname: "Iron"
     }
 },
@@ -953,7 +951,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/TONY-FERGUSON.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 279",
+        lastAppearance: "UFC Fight Night: Sandhagen vs. Nurmagomedov",
         nickname: "El Cucuy"
     }
 },
@@ -985,7 +983,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/RAFAEL-FIZIEV.png",
     hints: {
         style: "Muay Thai",
-        lastAppearance: "UFC 299",
+        lastAppearance: "UFC 313",
         nickname: "Ataman"
     }
 },
@@ -1001,7 +999,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/MATEUSZ-GAMROT.png",
     hints: {
         style: "Wrestling",
-        lastAppearance: "UFC 298",
+        lastAppearance: "UFC 305",
         nickname: "Gamer"
     }
 },
@@ -1017,7 +1015,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/BENEIL-DARIUSH.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 297",
+        lastAppearance: "UFC Fight Night: Dariush vs. Tsarukyan",
         nickname: "Benny"
     }
 },
@@ -1033,12 +1031,11 @@ const fighters = [
     image: "../FIGHTER-IMAGES/DAN-HOOKER.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 300",
+        lastAppearance: "UFC 305",
         nickname: "The Hangman"
     }
 },
 
-/* FEATHERWEIGHTS */
 /* FEATHERWEIGHTS */
 {
     name: "Jose Aldo",
@@ -1052,7 +1049,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JOSE-ALDO.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 278",
+        lastAppearance: "UFC 307",
         nickname: "Junior"
     }
 },
@@ -1068,7 +1065,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/MAX-HOLLOWAY.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 297",
+        lastAppearance: "UFC 308",
         nickname: "Blessed"
     }
 },
@@ -1084,7 +1081,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ALEXANDER-VOLKANOVSKI.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 314",
+        lastAppearance: "UFC 298",
         nickname: "The Great"
     }
 },
@@ -1164,7 +1161,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/YAIR-RODRIGUEZ.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 290",
+        lastAppearance: "UFC Fight Night: Moreno vs. Royval 2",
         nickname: "El Pantera"
     }
 },
@@ -1180,7 +1177,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/BRIAN-ORTEGA.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 299",
+        lastAppearance: "UFC 306",
         nickname: "T-City"
     }
 },
@@ -1196,7 +1193,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/JOSH-EMMETT.png",
     hints: {
         style: "Striking/Wrestling",
-        lastAppearance: "UFC 298",
+        lastAppearance: "UFC 296",
         nickname: "CC0"
     }
 },
@@ -1212,7 +1209,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ARNOLD-ALLEN.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 297",
+        lastAppearance: "UFC 304",
         nickname: "Almighty"
     }
 },
@@ -1230,7 +1227,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ALJAMAIN-STERLING.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 292",
+        lastAppearance: "UFC 310",
         nickname: "Funk Master"
     }
 },
@@ -1262,7 +1259,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/PETR-YAN.png",
     hints: {
         style: "Boxing",
-        lastAppearance: "UFC 298",
+        lastAppearance: "UFC Fight Night: Yan vs. Figueiredo",
         nickname: "No Mercy"
     }
 },
@@ -1278,7 +1275,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/CORY-SANDHAGEN.png",
     hints: {
         style: "Striker",
-        lastAppearance: "UFC 299",
+        lastAppearance: "UFC Fight Night: Sandhagen vs. Nurmagomedov",
         nickname: "The Sandman"
     }
 },
@@ -1294,7 +1291,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/MARLON-VERA.png",
     hints: {
         style: "BJJ/Striking",
-        lastAppearance: "UFC 295",
+        lastAppearance: "UFC Fight Night: Sandhagen vs. Nurmagomedov",
         nickname: "Chito"
     }
 },
@@ -1310,7 +1307,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/DOMINICK-CRUZ.png",
     hints: {
         style: "Wrestling",
-        lastAppearance: "UFC 278",
+        lastAppearance: "UFC Fight Night: Vera vs. Cruz",
         nickname: "The Dominator"
     }
 },
@@ -1326,7 +1323,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/MERAB-DVALISHVILI.png",
     hints: {
         style: "Wrestling",
-        lastAppearance: "UFC 300",
+        lastAppearance: "UFC 311",
         nickname: "The Machine"
     }
 },
@@ -1342,7 +1339,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/SONG-YADONG.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 299",
+        lastAppearance: "UFC Fight Night: Cejudo vs. Song",
         nickname: "Kung Fu Kid"
     }
 },
@@ -1358,7 +1355,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/UMAR-NURMAGOMEDOV.png",
     hints: {
         style: "Wrestling",
-        lastAppearance: "UFC 297",
+        lastAppearance: "UFC 311",
         nickname: "No nickname"
     }
 },
@@ -1374,13 +1371,11 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ROB-FONT.png",
     hints: {
         style: "Boxing",
-        lastAppearance: "UFC 296",
+        lastAppearance: "UFC Fight Night: Cejudo vs. Song",
         nickname: "No nickname"
     }
 },
     
-/* FLYWEIGHTS */
-
 /* FLYWEIGHTS */
 {
     name: "Demetrious Johnson",
@@ -1410,7 +1405,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/KAI-KARA-FRANCE.png",
     hints: {
         style: "Striking",
-        lastAppearance: "UFC 293",
+        lastAppearance: "UFC 305",
         nickname: "Don't Blink"
     }
 },
@@ -1426,7 +1421,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/BRANDON-MORENO.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 290",
+        lastAppearance: "UFC Fight Night: Moreno vs. Albazi",
         nickname: "The Assassin Baby"
     }
 },
@@ -1442,7 +1437,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/HENRY-CEJUDO.png",
     hints: {
         style: "Wrestling",
-        lastAppearance: "UFC FIGHT NIGHT: CEJUDO VS SONG",
+        lastAppearance: "UFC Fight Night: Cejudo vs. Song",
         nickname: "Triple C"
     }
 },
@@ -1474,7 +1469,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/ALEXANDRE-PANTOJA.png",
     hints: {
         style: "BJJ",
-        lastAppearance: "UFC 296",
+        lastAppearance: "UFC 310",
         nickname: "The Cannibal"
     }
 },
@@ -1490,7 +1485,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/DEIVESON-FIGUEIREDO.png",
     hints: {
         style: "BJJ/Striking",
-        lastAppearance: "UFC 300",
+        lastAppearance: "UFC Fight Night: Yan vs. Figueiredo",
         nickname: "Deus da Guerra"
     }
 },
@@ -1506,7 +1501,7 @@ const fighters = [
     image: "../FIGHTER-IMAGES/STEVE-ERCEG.png",
     hints: {
         style: "Striking/Grappling",
-        lastAppearance: "UFC 300",
+        lastAppearance: "UFC 305",
         nickname: "Astro Boy"
     }
 },
